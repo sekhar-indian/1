@@ -3,7 +3,7 @@ function getTodos() {
   console.log(' ok GET Request');
 
   axios
-    .get("https://crudcrud.com/api/70ec1945f93b4db6952f3511a1f2424b/s")
+    .get("https://crudcrud.com/api/454f1d1f198e43b3b8e8da98bfba3eab/s")
     .then(res=>showOutput(res))
     .catch(err=>console.log(err))
 }
@@ -12,7 +12,7 @@ function getTodos() {
 function addTodo() {
   console.log('POST Request');
     axios
-      .post("https://crudcrud.com/api/70ec1945f93b4db6952f3511a1f2424b/s",{
+      .post("https://crudcrud.com/api/454f1d1f198e43b3b8e8da98bfba3eab/s",{
             name:"ram",
             id:"08"
       })
@@ -24,9 +24,10 @@ function addTodo() {
 function updateTodo() {
   console.log('PUT/PATCH Request');
   axios
-    .patch("https://crudcrud.com/api/70ec1945f93b4db6952f3511a1f2424b/s/1",{
-      name:"vaibav",
-      id:"00"
+    .put("https://crudcrud.com/api/454f1d1f198e43b3b8e8da98bfba3eab/s/6548f7692e0fb203e8543f3a",{
+      name:"vaibav sir",
+      id:"07"
+      
     })
     .then(res=>showOutput(res))
     .catch(err=>console.log(err))
@@ -35,6 +36,11 @@ function updateTodo() {
 // DELETE REQUEST
 function removeTodo() {
   console.log('DELETE Request');
+  axios 
+    .delete("https://crudcrud.com/api/454f1d1f198e43b3b8e8da98bfba3eab/s/6548f7692e0fb203e8543f3a")
+    .then(res=>showOutput(res))
+    .catch(err=>console.log(err))
+
 
 }
 
